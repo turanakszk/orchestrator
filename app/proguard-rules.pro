@@ -1,0 +1,4 @@
+-keep class com.yoremden.orchestrator.data.api.** { *; }
+-keepattributes Signature,*Annotation*
+-dontwarn okhttp3.**
+-dontwarn retrofit2.**
