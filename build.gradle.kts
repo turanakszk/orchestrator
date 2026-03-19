@@ -1,1 +1,36 @@
-plugins{id("com.android.application")version"8.5.2"apply false;id("org.jetbrains.kotlin.android")version"2.0.21"apply false;id("org.jetbrains.kotlin.plugin.compose")version"2.0.21"apply false;id("com.google.devtools.ksp")version"2.0.21-1.0.27"apply false;id("com.google.dagger.hilt.android")version"2.52"apply false}
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.yoremden.orchestrator"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.yoremden.orchestrator"
+        minSdk = 24
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+}
